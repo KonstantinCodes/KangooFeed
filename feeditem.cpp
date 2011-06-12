@@ -36,7 +36,20 @@ void FeedItem::setDescription(QString description)
 
 void FeedItem::setInfo(QDate date, int fileSize, QTime length)
 {
-    double fileSizeMb = fileSize/1048576;
-    ui->infoLabel->setText((QString)date.toString("ddd, MMMM d yyyy")+" | "+QString::number(fileSizeMb, 'g', 1)+"Mb | "+length.toString("hh:mm:ss"));
+    QString fileSizeReadable;
+    QStringList units;
+    units << "KB" << "MB" << "GB";
+
+    QStringListIterator i(units);
+    QString unit("bytes");
+
+    while(fileSize >= 1024.0 && i.hasNext())
+    {
+        unit = i.next();
+        fileSize /= 1024.0;
+    }
+    fileSizeReadable = QString::number(fileSize,'f', 2)+unit;
+
+    ui->infoLabel->setText((QString)date.toString("ddd, MMMM d yyyy")+" | "+fileSizeReadable+" | "+length.toString("hh:mm:ss"));
 }
 
