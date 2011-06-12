@@ -1,6 +1,8 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QtGui>
+#include <QApplication>
+#include <QLabel>
 #include "feeditem.h"
 
 Widget::Widget(QWidget *parent) :
@@ -15,6 +17,10 @@ Widget::Widget(QWidget *parent) :
         FeedItem *feed = new FeedItem();
         ui->feedVerticalLayout->addWidget(feed);
     }
+
+    QLabel * label = new QLabel();
+    label->setText("sfsf");
+    QApplication::alert(label, 20000);
 }
 
 Widget::~Widget()
