@@ -1,5 +1,7 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include <QtGui>
+#include "feeditem.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
