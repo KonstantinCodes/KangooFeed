@@ -8,6 +8,11 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
+
+
+    //FeedItem f = new FeedItem();
+
+    //ui->feedVerticalLayout->addWidget(f);
 }
 
 Widget::~Widget()

@@ -8,8 +8,8 @@ int main(int argc, char *argv[])
     Widget w;
     w.show();
 
-    FeedItem f;
-    f.show();
+    //FeedItem f;
+    //f.show();
 
     return a.exec();
 }
