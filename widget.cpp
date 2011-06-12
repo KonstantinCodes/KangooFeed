@@ -10,9 +10,11 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
 
 
-    //FeedItem f = new FeedItem();
 
-    //ui->feedVerticalLayout->addWidget(f);
+    for(int i = 0; i < 100; i++) {
+        FeedItem *feed = new FeedItem();
+        ui->feedVerticalLayout->addWidget(feed);
+    }
 }
 
 Widget::~Widget()
