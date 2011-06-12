@@ -21,25 +21,67 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QTreeView" name="treeView">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="showDropIndicator" stdset="0">
+      <bool>true</bool>
      </property>
-     <property name="minimumSize">
-      <size>
-       <width>150</width>
-       <height>0</height>
-      </size>
+     <property name="animated">
+      <bool>true</bool>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>100</width>
-       <height>16777215</height>
-      </size>
+     <property name="headerHidden">
+      <bool>true</bool>
      </property>
+     <property name="columnCount">
+      <number>1</number>
+     </property>
+     <attribute name="headerCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>FeedName</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>BBC</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Business News</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Top Gear</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZDF</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>aspekte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>heute magazin</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>ARD</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Tatort</string>
+       </property>
+      </item>
+     </item>
     </widget>
    </item>
    <item>
@@ -54,7 +96,7 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>652</width>
+          <width>399</width>
           <height>173</height>
          </rect>
         </property>
