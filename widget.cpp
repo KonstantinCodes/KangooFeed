@@ -14,6 +14,7 @@ Widget::Widget(QWidget *parent) :
     for(int i = 0; i < 100; i++) {
         FeedItem *feed = new FeedItem(QPixmap(":/icons/icons/thumbnail.svg"), (QString)"Titel", (QString)"Beschreibung, blassf f ", QDate(2011, 06, 12), 20023000, QTime(2, 32, 27));
         ui->feedVerticalLayout->addWidget(feed);
+        //ui->feedVerticalLayout->addWidget(new Line);
     }
 
     QLabel * label = new QLabel();
