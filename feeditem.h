@@ -13,10 +13,11 @@ class FeedItem : public QWidget
     Q_OBJECT
 
 public:
-    explicit FeedItem(QPixmap, QString, QDate, int, QTime, QWidget *parent = 0);
+    explicit FeedItem(QPixmap, QString, QString, QDate, int, QTime, QWidget *parent = 0);
     ~FeedItem();
     void setThumbnail(QPixmap);
-    void setTitle(QString title);
+    void setTitle(QString);
+    void setDescription(QString);
     void setInfo(QDate, int, QTime);
 
 private:

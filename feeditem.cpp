@@ -2,7 +2,7 @@
 #include "feeditem.h"
 #include "ui_feeditem.h"
 
-FeedItem::FeedItem(QPixmap thumbnail, QString titel, QDate date, int fileSize, QTime length, QWidget *parent) :
+FeedItem::FeedItem(QPixmap thumbnail, QString titel, QString description, QDate date, int fileSize, QTime length, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::FeedItem)
 {
@@ -10,6 +10,7 @@ FeedItem::FeedItem(QPixmap thumbnail, QString titel, QDate date, int fileSize, Q
     ui->setupUi(this);
     setThumbnail(thumbnail);
     setTitle(titel);
+    setDescription(description);
     setInfo(date, fileSize, length);
 }
 
@@ -28,8 +29,14 @@ void FeedItem::setTitle(QString title)
     ui->titleLabel->setText(title);
 }
 
+void FeedItem::setDescription(QString description)
+{
+    ui->descriptionLabel->setText(description);
+}
+
 void FeedItem::setInfo(QDate date, int fileSize, QTime length)
 {
-    ui->infoLabel->setText((QString)"Info: 12.06.2011 | 189.3Mb | 2:42:29"); //date+" | "+fileSize+" | "+length
+    double fileSizeMb = fileSize/1048576;
+    ui->infoLabel->setText((QString)date.toString("ddd, MMMM d yyyy")+" | "+QString::number(fileSizeMb, 'g', 1)+"Mb | "+length.toString("hh:mm:ss"));
 }
 

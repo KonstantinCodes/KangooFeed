@@ -12,7 +12,7 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
 
     for(int i = 0; i < 100; i++) {
-        FeedItem *feed = new FeedItem(QPixmap(":/icons/icons/thumbnail.svg"), (QString)"Titel", QDate(2011, 06, 12), 5345, QTime(2, 32, 27));
+        FeedItem *feed = new FeedItem(QPixmap(":/icons/icons/thumbnail.svg"), (QString)"Titel", (QString)"Beschreibung, blassf f ", QDate(2011, 06, 12), 20023000, QTime(2, 32, 27));
         ui->feedVerticalLayout->addWidget(feed);
     }
 
