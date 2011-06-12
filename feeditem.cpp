@@ -7,8 +7,7 @@ FeedItem::FeedItem(QWidget *parent) :
 {
     Q_INIT_RESOURCE(icons);
     ui->setupUi(this);
-    ui->thumbnail->setPixmap(QPixmap(":/icons/play.png"));
-
+    ui->thumbnail->setPixmap(QPixmap(":/icons/icons/thumbnail.svg"));
 }
 
 FeedItem::~FeedItem()
