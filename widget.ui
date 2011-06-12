@@ -20,10 +20,10 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QListView" name="feedListView"/>
+      <widget class="QListWidget" name="feedListWidget"/>
      </item>
      <item>
-      <widget class="QListView" name="relatedListView"/>
+      <widget class="QListWidget" name="relatedListWidget"/>
      </item>
     </layout>
    </item>
